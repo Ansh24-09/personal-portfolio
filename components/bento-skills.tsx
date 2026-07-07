@@ -9,10 +9,8 @@ export function BentoSkills() {
         <p className="text-sm text-zinc-400">A snapshot of my engineering toolkit and academic focus areas.</p>
       </div>
 
-      {/* Grid Wrapper */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[160px]">
         
-        {/* Card 1: Main Tech Stack (Large 2-column card) */}
         <div className="md:col-span-2 md:row-span-2 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 flex flex-col justify-between hover:border-zinc-700 transition-all group relative overflow-hidden">
           <div className="absolute -inset-px bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
           <div>
@@ -33,7 +31,6 @@ export function BentoSkills() {
           </div>
         </div>
 
-        {/* Card 2: Specialized Architecture (Vertical card) */}
         <div className="md:row-span-2 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 flex flex-col justify-between hover:border-zinc-700 transition-all group relative overflow-hidden">
           <div className="absolute -inset-px bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
           <div>
@@ -50,7 +47,6 @@ export function BentoSkills() {
           </div>
         </div>
 
-        {/* Card 3: Blockchain (Horizontal Card) */}
         <div className="md:col-span-2 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 flex flex-col justify-between sm:flex-row sm:items-center hover:border-zinc-700 transition-all group relative overflow-hidden">
           <div className="absolute -inset-px bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
           <div className="flex gap-4 items-start">

@@ -1,7 +1,7 @@
-"use client"; // CRITICAL: Tells Next.js to allow client-side click events and state tracking
+"use client";
 import React, { useState } from 'react';
 import { ArrowUpRight, FolderGit2 } from "lucide-react";
-import { ProjectModal } from "./project-model"; // Imports your architecture modal layout
+import { ProjectModal } from "./project-model";
 
 interface Project {
   title: string;
@@ -42,7 +42,6 @@ const projectsList: Project[] = [
   ];
 
 export function FeaturedProjects() {
-  // 1. Declare state to track if the SERS deep-dive modal is open
   const [isSersOpen, setIsSersOpen] = useState(false);
 
   return (
@@ -52,16 +51,13 @@ export function FeaturedProjects() {
         <p className="text-sm text-zinc-400">Practical code implementations translating core engineering concepts into software solutions.</p>
       </div>
 
-      {/* Responsive Cards Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projectsList.map((project, index) => (
           <div 
             key={index}
-            // 2. Triggers the modal popup only if 'hasModal' is true, and applies a pointer cursor
             onClick={() => project.hasModal && setIsSersOpen(true)}
             className={`group relative rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-zinc-700 hover:bg-zinc-900/60 shadow-xl ${project.hasModal ? 'cursor-pointer' : ''}`}
           >
-            {/* Soft Glowing Ambient Background Layer */}
             <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
             
             <div className="relative z-10">
@@ -70,7 +66,6 @@ export function FeaturedProjects() {
                   <FolderGit2 className="w-4 h-4" />
                 </div>
                 
-                {/* 3. stopPropagation prevents the modal from opening if a recruiter just wants to go directly to GitHub */}
                 <div className="flex gap-4 text-zinc-500 text-xs" onClick={(e) => e.stopPropagation()}>
                   <a 
                     href={project.githubUrl} 
@@ -99,7 +94,6 @@ export function FeaturedProjects() {
               
               <p className="mt-2 text-sm text-zinc-400 leading-relaxed font-normal">
                 {project.description}
-                {/* 4. Visual hint for the recruiter that the card is fully interactive */}
                 {project.hasModal && (
                   <span className="block mt-3 text-xs text-blue-400 font-medium group-hover:underline">
                     Click card for architectural deep-dive →
@@ -108,7 +102,6 @@ export function FeaturedProjects() {
               </p>
             </div>
 
-            {/* Tech Badges Row */}
             <div className="relative z-10 mt-6 flex flex-wrap gap-1.5">
               {project.tags.map((tag) => (
                 <span 
@@ -123,7 +116,6 @@ export function FeaturedProjects() {
         ))}
       </div>
 
-      {/* 5. Inject the modal tracking state portal right at the bottom of the section */}
       <ProjectModal isOpen={isSersOpen} onClose={() => setIsSersOpen(false)} />
     </section>
   );

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BentoSkills } from "@/components/bento-skills";
-import { FeaturedProjects } from "@/components/featured-projects"; // <-- Import the new section
+import { FeaturedProjects } from "@/components/featured-projects";
 import { ArrowUpRight, Globe, Link2, Mail } from "lucide-react";
 
 export default function Home() {
@@ -9,7 +9,6 @@ export default function Home() {
       
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.04),transparent_50%)] pointer-events-none" />
 
-      {/* Hero Section */}
       <div className="relative z-10 max-w-2xl text-center space-y-6 mb-16">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 border border-blue-500/20 mx-auto">
           <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
@@ -29,7 +28,6 @@ export default function Home() {
             View My Work
           </Button>
           
-          {/* Linked to your asset inside /public/resume.pdf */}
           <a href="/resume.pdf" download="Shivansh_Tripathi_Resume.pdf" className="inline-block">
             <Button variant="outline" className="border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 font-medium rounded-xl px-5 w-full">
               Download Resume
@@ -50,10 +48,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bento Grid Skills Section */}
       <BentoSkills />
 
-      {/* Projects Section */}
       <FeaturedProjects />
 
     </main>
