@@ -61,7 +61,7 @@ export function ProjectModal({ isOpen, onClose }: ModalProps) {
           <h4 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider font-mono">Algorithm Spec Sheets</h4>
           <ul className="space-y-2 text-sm text-zinc-400 list-disc list-inside font-normal">
             <li><strong className="text-zinc-200">Multi-Pattern Keyword Search:</strong> Implemented a failure-link trie structure mimicking string patterns simultaneously to isolate medical crisis contexts instantaneously.</li>
-            <li><strong className="text-zinc-200">Dynamic Multipliers:</strong> Implemented scale ranges dynamically ($2.5\times$ morning rush to $3.5\times$ evening rush) to precisely factor in latency.</li>
+            <li><strong className="text-zinc-200">Dynamic Multipliers:</strong> Implemented scale ranges dynamically (2.5\times morning rush to 3.5\times$ evening rush) to precisely factor in latency.</li>
             <li><strong className="text-zinc-200">Asynchronous Logging:</strong> Formats stream data updates directly into a clean, JSON-serializable log table structure.</li>
           </ul>
         </div>
