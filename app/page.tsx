@@ -29,9 +29,12 @@ export default function Home() {
             View My Work
           </Button>
           
-          <Button variant="outline" className="border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 font-medium rounded-xl px-5">
-            Download Resume
-          </Button>
+          {/* Linked to your asset inside /public/resume.pdf */}
+          <a href="/resume.pdf" download="Shivansh_Tripathi_Resume.pdf" className="inline-block">
+            <Button variant="outline" className="border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 font-medium rounded-xl px-5 w-full">
+              Download Resume
+            </Button>
+          </a>
         </div>
 
         <div className="flex items-center justify-center gap-6 pt-8 text-zinc-500">
