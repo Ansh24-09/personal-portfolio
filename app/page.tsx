@@ -1,9 +1,18 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { BentoSkills } from "@/components/bento-skills";
 import { FeaturedProjects } from "@/components/featured-projects"; 
 import { ArrowUpRight, Globe, Link2, Mail } from "lucide-react";
 
 export default function Home() {
+  const scrollToProjects = () => {
+    const element = document.getElementById("projects-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="relative min-h-screen bg-zinc-950 text-zinc-50 flex flex-col items-center p-6 overflow-x-hidden pt-24 pb-24">
       
@@ -24,7 +33,10 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <Button className="bg-zinc-100 text-zinc-900 hover:bg-zinc-200 font-medium rounded-xl px-5 shadow-lg">
+          <Button 
+            onClick={scrollToProjects}
+            className="bg-zinc-100 text-zinc-900 hover:bg-zinc-200 font-medium rounded-xl px-5 shadow-lg cursor-pointer"
+          >
             View My Work
           </Button>
           
@@ -52,7 +64,9 @@ export default function Home() {
 
       <BentoSkills />
 
-      <FeaturedProjects />
+      <div id="projects-section" className="w-full">
+        <FeaturedProjects />
+      </div>
 
     </main>
   );
