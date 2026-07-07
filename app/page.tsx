@@ -44,7 +44,7 @@ export default function Home() {
             <Link2 className="w-4 h-4" /> LinkedIn
           </a>
           
-          <a href="mailto:your.email@domain.com" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
+          <a href="mailto:shivanshtripathi2409@gmail.com" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
             <Mail className="w-4 h-4" /> Email
           </a>
         </div>
