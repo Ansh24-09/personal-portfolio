@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BentoSkills } from "@/components/bento-skills";
-import { FeaturedProjects } from "@/components/featured-projects";
+import { FeaturedProjects } from "@/components/featured-projects"; 
 import { ArrowUpRight, Globe, Link2, Mail } from "lucide-react";
 
 export default function Home() {
@@ -36,13 +36,15 @@ export default function Home() {
         </div>
 
         <div className="flex items-center justify-center gap-6 pt-8 text-zinc-500">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
+          <a href="https://github.com/Ansh24-09" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
             <Globe className="w-4 h-4" /> GitHub
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
+          
+          <a href="https://www.linkedin.com/in/shivansh-tripathi-65b546349/" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
             <Link2 className="w-4 h-4" /> LinkedIn
           </a>
-          <a href="mailto:your-email@example.com" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
+          
+          <a href="mailto:your.email@domain.com" className="hover:text-zinc-100 transition-colors flex items-center gap-1 text-sm">
             <Mail className="w-4 h-4" /> Email
           </a>
         </div>
